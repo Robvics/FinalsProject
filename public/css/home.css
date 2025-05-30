@@ -1,0 +1,9 @@
+h1{
+    font-size: 100px;
+}
+
+.main-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

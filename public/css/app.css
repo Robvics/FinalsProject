@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+}
+.main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.sidebar {
+    font-size: 1rem; /* Use rem for better scalability */
+    position: fixed; /* Keeps the sidebar in view during scrolling */
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #333; /* Darker, more modern grey */
+    color: #f8f9fa; /* Light text for better contrast */
+    padding: 1.5rem; /* Use rem for consistent spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start; /* Start content from the top */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 10; /* Ensure it stays above other content */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for potential animations */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.sidebar.collapsed {
+    transform: translateX(-250px); /* Example for a collapsible sidebar */
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #eee; /* Slightly lighter heading text */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Make the list take full width */
+}
+
+.sidebar li {
+    margin-bottom: 0.75rem;
+    width: 100%;
+}
+
+.sidebar a {
+    display: block; /* Make the entire link clickable */
+    color: #ccc;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    width: 100%; /* Ensure links take full width */
+    box-sizing: border-box; /* Prevent padding from affecting width */
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background on hover */
+    color: #fff;
+}
+
+.sidebar .active a {
+    background-color: #007bff; /* Highlight the active link */
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Optional enhancements: */
+
+/* Add a separator */
+.sidebar hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 1rem 0;
+    width: 80%;
+}
+
+/* Style for icons (if you have them) */
+.sidebar a i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive adjustments (example for smaller screens) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        font-size: 18px;
+    }
+}
+
+.main-content{
+    margin-left: 300px;
+    width: 100%;
+}
+
+.button{
+    background-color: blue; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
