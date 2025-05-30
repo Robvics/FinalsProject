@@ -1,0 +1,5 @@
+<div>
+    
+
+    @livewire( 'register')
+</div>
